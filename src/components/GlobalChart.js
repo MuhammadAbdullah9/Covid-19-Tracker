@@ -53,7 +53,7 @@ export default function GlobalChart() {
                 data={state}
 
                 options={{
-                    maintainAspectRatio: false ,
+                    maintainAspectRatio: false,
                     legend: {
                         display: true,
                         position: 'top'

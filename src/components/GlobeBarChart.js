@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { Bar } from 'react-chartjs-2';
 
 
-
 export default function GlobeBarChart() {
 
     const [BarData, setBarData] = useState()
@@ -31,7 +30,7 @@ export default function GlobeBarChart() {
                 data: [Cases, Recovered, Deaths],
                 barPercentage: 1,
                 barThickness: 50,
-                hoverBackgroundColor: [ '#FDD835' , '#43A047' , '#B71C1C' ],
+                hoverBackgroundColor: ['#FDD835', '#43A047', '#B71C1C'],
                 minBarLength: 150
             }
         ]
@@ -48,9 +47,9 @@ export default function GlobeBarChart() {
                         position: 'bottom'
                     },
                     title: {
-                        display: true, 
+                        display: true,
                         text: `Today's Worldwide Statistics`,
-                        fontSize:25
+                        fontSize: 25
                     },
                     scales: {
                         xAxes: [{
@@ -61,9 +60,6 @@ export default function GlobeBarChart() {
                         yAxes: [{
                             gridLines: {
                                 display: false
-                            },
-                            ticks: {
-                                stepSize: 100000
                             }
                         }]
                     },

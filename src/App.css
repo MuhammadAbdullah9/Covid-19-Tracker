@@ -31,3 +31,16 @@
   background-color: #424242;
   color: white;
 }
+.leftBorder-r{
+  border-bottom: 4px solid #43A047 ;
+  padding:7px;
+  
+}
+.leftBorder-i{
+  border-bottom: 4px solid #FDD835 ;
+  padding:7px;
+}
+.leftBorder-d{
+  border-bottom: 4px solid #B71C1C ;
+  padding:7px;
+}

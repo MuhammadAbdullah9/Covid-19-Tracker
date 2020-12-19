@@ -6,28 +6,28 @@ import { makeStyles } from '@material-ui/core/styles';
 
 
 const useStyles = makeStyles((theme) => ({
-  root: {
-    flexGrow: 1,
-  },
-  toolbar: {
-    minHeight: 90,
-    alignItems: 'center',
-    backgroundColor:'#7986CB'
-  },
+    root: {
+        flexGrow: 1,
+    },
+    toolbar: {
+        minHeight: 90,
+        alignItems: 'center',
+        backgroundColor: '#7986CB'
+    },
 }));
 
 export default function Header() {
-  const classes = useStyles();
+    const classes = useStyles();
 
-  return (
-    <div className={classes.root}>
-      <AppBar position="static">
-        <Toolbar className={classes.toolbar}>
-          <Typography variant="h5" noWrap>
-            COVID-19 Tracker
+    return (
+        <div className={classes.root}>
+            <AppBar position="static">
+                <Toolbar className={classes.toolbar}>
+                    <Typography variant="h5" noWrap>
+                        COVID-19 Tracker
           </Typography>
-        </Toolbar>
-      </AppBar>
-    </div>
-  );
+                </Toolbar>
+            </AppBar>
+        </div>
+    );
 }

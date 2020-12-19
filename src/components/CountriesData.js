@@ -5,13 +5,11 @@ import Grid from '@material-ui/core/Grid';
 export default function CountriesData() {
 
     const [CountryData, setCountryData] = useState([])
+
     var infected = []
     var recovered = []
     var deaths = []
     var lastUpdated = []
- 
-   
-
 
     useEffect(() => {
 
@@ -29,18 +27,18 @@ export default function CountriesData() {
     CountryData && CountryData.map(v => {
         return infected.push(v.infected)
     })
-    
+
     CountryData && CountryData.map(v => {
         return recovered.push(v.recovered)
     })
-    
+
     CountryData && CountryData.map(v => {
         return deaths.push(v.deceased)
     })
     CountryData && CountryData.map(v => {
         return lastUpdated.push(v.lastUpdatedAtSource)
-    })   
-    
+    })
+
     const data = {
         labels: lastUpdated,
         datasets: [
@@ -75,9 +73,9 @@ export default function CountriesData() {
         title: {
             display: true,
             text: "Day to Day statistics of Pakistan",
-            fontSize:35
+            fontSize: 35
         },
-        maintainAspectRatio: false ,
+        maintainAspectRatio: false,
         scales: {
             yAxes: [{
                 ticks: {
@@ -92,13 +90,10 @@ export default function CountriesData() {
         }
     };
 
-
-
-
     return (
         <div className={'bg pakData'}>
             <Grid container>
-            <Line height={500} data={data} legend={legend} options={options} />
+                <Line height={500} data={data} legend={legend} options={options} />
             </Grid>
         </div>
     )
